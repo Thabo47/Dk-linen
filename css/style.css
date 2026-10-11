@@ -1,0 +1,378 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f8fa;
+    color: #172b4d;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* Navigation */
+header {
+    background: white;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 2px 10px #0000000d;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #17365d;
+}
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #c49a52;
+}
+
+/* Hero */
+.hero {
+    min-height: 430px;
+    background:
+        linear-gradient(90deg, #101b2de8, #101b2d30),
+        url("https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1800&q=85")
+        center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 60px 7%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(36px, 5vw, 58px);
+    margin-bottom: 12px;
+}
+
+.hero h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #c49a52;
+    color: #101b2d;
+    padding: 13px 28px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* Section headings */
+.categories,
+.products {
+    padding: 65px 6%;
+    text-align: center;
+}
+
+.categories h2,
+.products h2,
+.about h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    color: #17365d;
+}
+
+.section-intro {
+    margin: 8px 0 35px;
+    color: #667085;
+}
+
+/* Category cards */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    text-align: left;
+}
+
+.category-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px #172b4d10;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px #172b4d20;
+}
+
+.category-card img {
+    height: 230px;
+}
+
+.category-info {
+    padding: 20px;
+}
+
+.category-info h3 {
+    margin-bottom: 7px;
+    color: #17365d;
+}
+
+.category-info p {
+    font-size: 14px;
+    color: #667085;
+}
+
+/* Product cards */
+.products {
+    background: #edf1f6;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+    text-align: left;
+}
+
+.product-card {
+    background: white;
+    border-radius: 9px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #172b4d0d;
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    height: 210px;
+}
+
+.product-info {
+    padding: 18px;
+}
+
+.tag {
+    display: inline-block;
+    color: #8b692f;
+    background: #f7edd9;
+    font-size: 12px;
+    padding: 4px 9px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.product-info h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.price {
+    color: #17365d;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+.product-btn {
+    display: block;
+    text-align: center;
+    background: #17365d;
+    color: white;
+    padding: 11px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.product-btn:hover {
+    background: #c49a52;
+    color: #101b2d;
+}
+
+/* About section */
+.about {
+    padding: 65px 10%;
+    text-align: center;
+    background: white;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 15px auto 0;
+    color: #667085;
+}
+
+/* Footer */
+footer {
+    background: #112b45;
+    color: white;
+}
+
+.footer-content {
+    padding: 45px 6%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.footer-content h2 {
+    margin-bottom: 8px;
+}
+
+.footer-content h3 {
+    margin-bottom: 12px;
+}
+
+.footer-content a {
+    display: block;
+    color: #d6deea;
+    margin-bottom: 8px;
+}
+
+.footer-content a:hover {
+    color: #e4bd76;
+}
+
+.footer-content p {
+    color: #d6deea;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+.copyright {
+    padding: 18px;
+    text-align: center;
+    background: #0b1e30;
+    font-size: 13px;
+}
+
+/* Responsive layout for tablets */
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Responsive layout for phones */
+@media (max-width: 550px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 380px;
+        padding: 40px 6%;
+    }
+
+    .hero h3 {
+        font-size: 17px;
+    }
+
+    .categories,
+    .products {
+        padding: 45px 5%;
+    }
+
+    .categories h2,
+    .products h2,
+    .about h2 {
+        font-size: 28px;
+    }
+
+    .category-grid,
+    .product-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card img {
+        height: 220px;
+    }
+
+    .product-card img {
+        height: 240px;
+    }
+
+    .about {
+        padding: 45px 6%;
+    }
+}
